@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var plugins = [
     new HtmlWebpackPlugin({
-        title: "Atomer's website.",
+        title: "react 000",
         template: path.resolve(__dirname, 'templates/index.ejs'),
         inject: 'body'
     })

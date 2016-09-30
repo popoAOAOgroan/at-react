@@ -94,14 +94,14 @@
 	    }
 	});
 
-	var CommentForm = _react2.default.createClass({
-	    displayName: 'CommentForm',
+	var HeaderComponent = _react2.default.createClass({
+	    displayName: 'HeaderComponent',
 
 	    render: function render() {
 	        return _react2.default.createElement(
 	            'div',
-	            { className: 'commentForm' },
-	            'Hello, world! I am a CommentForm.'
+	            { className: 'header' },
+	            '我是uu'
 	        );
 	    }
 	});
@@ -112,8 +112,7 @@
 	        return _react2.default.createElement(
 	            'div',
 	            { className: 'comment' },
-	            _react2.default.createElement(CommentList, { data: this.props.data }),
-	            _react2.default.createElement(CommentForm, null)
+	            _react2.default.createElement(HeaderComponent, null)
 	        );
 	    }
 	});

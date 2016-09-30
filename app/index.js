@@ -24,11 +24,11 @@ var CommentList = React.createClass({
     }
 });
 
-var CommentForm = React.createClass({
+var HeaderComponent = React.createClass({
     render: function() {
         return (
-            <div className="commentForm">
-                Hello, world! I am a CommentForm.
+            <div className="header">
+                我是uu
             </div>
         );
     }
@@ -37,8 +37,8 @@ var Comment = React.createClass({
     render: function() {
         return (
             <div className="comment">
-                <CommentList data={this.props.data} />
-                <CommentForm />
+                <HeaderComponent />
+            {/*<CommentList data={this.props.data} />*/}
             </div>
         );
     }
