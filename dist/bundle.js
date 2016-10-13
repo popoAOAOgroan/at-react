@@ -108,6 +108,18 @@
 	var Comment = _react2.default.createClass({
 	    displayName: 'Comment',
 
+	    componentDidMount: function componentDidMount() {
+	        console.log('did mount~');
+	        var _url = 'http://localhost:20000/commoninfo/encryptor';
+	        fetch(_url).then(function (response) {
+	            console.log('response', response);
+	            return response.json();
+	        }).then(function (response) {
+	            console.log('data', response);
+	        }).catch(function (e) {
+	            console.log("Oops, error");
+	        });
+	    },
 	    render: function render() {
 	        return _react2.default.createElement(
 	            'div',
