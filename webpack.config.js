@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var plugins = [
     new HtmlWebpackPlugin({
-        title: "react 000",
+        title: "资产管理",
         template: path.resolve(__dirname, 'templates/index.ejs'),
         inject: 'body'
     })

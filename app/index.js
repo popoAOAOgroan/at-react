@@ -2,38 +2,43 @@ import './index.scss';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-var data = [
-    {id: 1, author: "Pete Hunt", text: "This is one comment"},
-    {id: 2, author: "Jordan Walke", text: "This is *another* comment"}
-];
-var CommentList = React.createClass({
+import ComponentOne from './componentOne.js';
+import ComponentTwo from './componentTwo.js';
+
+var HeaderComponent = React.createClass({
+    handleClick: function(){
+        // console.log('child call me?');
+        this.props.changeFn();
+    },
     render: function() {
-        var commentNodes = this.props.data.map(function(comment) {
-            return (
-                <div key={comment.id}>
-                    <h1>{comment.author}</h1>
-                    <p>{comment.text}</p>
-                </div>
-            );
-        });
         return (
-            <div className="commentList">
-                {commentNodes}
+            <div className="header">
+                <div>{this.props.router.name}</div>
+                <div onClick={this.handleClick}>+</div>
             </div>
         );
     }
 });
 
-var HeaderComponent = React.createClass({
-    render: function() {
-        return (
-            <div className="header">
-                我是uu
-            </div>
-        );
-    }
-});
 var Comment = React.createClass({
+    // getInitialState: function(){
+    //     return {router: 'layer.home'};
+    // },
+    getInitialState: function(){
+        return {
+            router: 'layer.home',
+            name: '我的资产',
+            go: '0'
+        };
+    },
+    changeRouter: function(){
+        console.log('parent call me?')
+        this.setState({
+            router: 'layer.home',
+            name: '添加资产',
+            go: '1'
+        });
+    },
     componentDidMount: function() {
         console.log('did mount~');
         let _url = 'http://localhost:20000/commoninfo/encryptor';
@@ -47,16 +52,22 @@ var Comment = React.createClass({
         });
     },
     render: function() {
-        return (
+        var twoPage = this.state.go;
+        return twoPage==1?(
             <div className="comment">
-                <HeaderComponent />
-            {/*<CommentList data={this.props.data} />*/}
+                <HeaderComponent changeFn={this.changeRouter} router={this.state}/>
+                <ComponentTwo />
+            </div>
+        ):(
+            <div className="comment">
+                <HeaderComponent changeFn={this.changeRouter} router={this.state}/>
+                <ComponentOne />
             </div>
         );
     }
 });
 
 ReactDOM.render(
-    <Comment data={data} />,
+    <Comment/>,
     document.getElementById('content')
 );

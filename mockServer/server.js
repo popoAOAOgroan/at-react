@@ -1,4 +1,5 @@
 var express = require('express');
+var app = express();
 
 var https = require('http');
 var fs = require("fs");
@@ -10,7 +11,6 @@ var bodyParser = require('body-parser');
 var cons = require('consolidate');
 var logger = require("./helpers/log");
 var route = require("./config/route");
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
