@@ -1,12 +1,16 @@
 $color-primary: green;
-h1{
-    color: $color-primary;
-}
-.my-name{
-    font-size: 20px;
-    font-weight: bold;
-    color: #00bfff;
+body{
+	margin: 0px;
+	padding: 0px;
 }
 .header{
-
+	$header-h: 30px;
+	background: #ddd;
+	display: flex;
+	height: $header-h;
+	line-height: $header-h;
+	.left-btn,.title,.right-btn{
+		flex: 1;
+		text-align: center;
+	}
 }

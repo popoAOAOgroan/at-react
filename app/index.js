@@ -13,8 +13,9 @@ var HeaderComponent = React.createClass({
     render: function() {
         return (
             <div className="header">
-                <div>{this.props.router.name}</div>
-                <div onClick={this.handleClick}>+</div>
+                <div className="left-btn"></div>
+                <div className="title">{this.props.router.name}</div>
+                <div className="right-btn" onClick={this.handleClick}>+</div>
             </div>
         );
     }

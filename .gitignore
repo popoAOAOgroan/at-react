@@ -1,1 +1,4 @@
 node_modules
+mockServer/logs
+mockServer/npm-debug.log
+dist
