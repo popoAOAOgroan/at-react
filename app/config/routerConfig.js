@@ -1,17 +1,21 @@
 
-import HomeComponent from './HomeComponent.js';
-import AddComponent from './AddComponent.js';
+import HomeComponent from '../m_home/HomeComponent.js';
+import AddComponent from '../m_add/AddComponent.js';
 
 const allRouter = [
 	{
         router: 'home',
         name: '我的资产',
-        componentName: HomeComponent
+        componentName: HomeComponent,
+        showLeftBtn: false,
+        showRightBtn: true
     },
 	{
         router: 'add',
         name: '添加资产',
-        componentName: AddComponent
+        componentName: AddComponent,
+        showLeftBtn: true,
+        showRightBtn: false
     }
 ];
 

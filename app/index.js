@@ -2,8 +2,8 @@ import './index.scss';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RouterConfig from './routerConfig.js';
-import HeaderComponent from './HeaderComponent.js';
+import RouterConfig from './config/routerConfig.js';
+import HeaderComponent from './m_header/HeaderComponent.js';
 
 var Comment = React.createClass({
     getInitialState: function(){
