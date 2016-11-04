@@ -14,3 +14,17 @@ body{
 		text-align: center;
 	}
 }
+
+.home-layer{
+	.total-layer{
+		text-align: center;
+		background: #ddd;
+		.view-list>img{
+			width: 40%;
+			max-height: 100px;
+		}
+		.view-list>ul{
+			list-style: none;
+		}
+	}
+}

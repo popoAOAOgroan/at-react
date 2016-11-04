@@ -1,7 +1,10 @@
+//scss
 import './index.scss';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+//component
 import RouterConfig from './config/routerConfig.js';
 import HeaderComponent from './m_header/HeaderComponent.js';
 
