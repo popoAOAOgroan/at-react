@@ -1,30 +1,147 @@
 $color-primary: green;
-body{
-	margin: 0px;
-	padding: 0px;
+* {
+    font-family: 'Microsoft YaHei',微软雅黑,'Microsoft Yahei',黑体,宋体,Arial,Simsun,Helvetica,sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 14px;
+    color: #333;
 }
+
+.btn{
+    background: #fff;
+    border: 1px solid #a7a7a7;
+    border-radius: 5px;
+    width: 100%;
+    line-height: 20px;
+    color: #333;
+    padding: 0 5px;
+    &.active{
+    	background: #0079b5;
+    	color: #fff;
+    	border-color: #4bd4ff;
+    }
+}
+.left{
+	text-align:left;
+}
+.right{
+	text-align:right;
+}
+.high-light{
+	color: red;
+}
+
+.content, .comment{
+	height:100%;
+}
+.comment{
+	display: flex;
+	flex-direction: column;
+}
+
 .header{
-	$header-h: 30px;
-	background: #ddd;
+	$header-h: 40px;
+	background: #fff;
 	display: flex;
 	height: $header-h;
 	line-height: $header-h;
 	.left-btn,.title,.right-btn{
 		flex: 1;
-		text-align: center;
 	}
+	.left-btn{text-align: left;}
+	.title{text-align: center; font-size: 16px;}
+	.right-btn{text-align: right;}
+	.btn{
+		border: 0px;
+		height: $header-h;
+		line-height: $header-h;
+		text-align: inherit;
+	}
+}
+
+.home-layer,.add-layer{
+	flex: 1;
+	padding: 10px 0;
+	background: #f1f1f1;
 }
 
 .home-layer{
 	.total-layer{
 		text-align: center;
-		background: #ddd;
 		.view-list>img{
 			width: 40%;
 			max-height: 100px;
 		}
 		.view-list>ul{
 			list-style: none;
+		}
+	}
+	.scroll{
+		padding: 10px 0;
+	}
+	.cell{
+		$cell-title-h: 30px;
+		background: #fff;
+		>h4{
+			background: #d2d2d2;
+			line-height: $cell-title-h;
+			padding: 0 10px;
+			font-weight: normal;
+		}
+		.info-group{
+			padding: 10px 0;
+			line-height: $cell-title-h;
+		}
+		p{
+			padding: 0 10px;
+			>span{
+				display: inline-block;
+				width:50%;
+			}
+		}
+
+	}
+}
+
+.add-layer{
+	padding: 10px; 
+	.tab-box{
+		display: flex;
+		>button{
+			flex: 1;
+			height: 35px;
+			border-radius: 0px;
+		}
+	}
+	.assets-one,.assets-two,.assets-thi{
+		padding: 10px 0;
+		>p{
+			$p-h: 30px;
+			text-align: left;
+			display: flex;
+			height: $p-h;
+			line-height: $p-h;
+			margin-top: 5px;
+			input[type='text']{
+				width: 100%;
+				flex:1;
+			}
+			input[type='radio']{
+				margin-top: 7px;
+			}
+			label{
+				margin-right: 10px;
+			}
+			span{
+				display: inline-block;
+				width: 15px;
+				text-align:center;
+			}
 		}
 	}
 }

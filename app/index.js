@@ -20,15 +20,15 @@ var Comment = React.createClass({
         });
     },
     componentDidMount: function() {
-        let _url = 'http://localhost:20000/commoninfo/encryptor';
-        fetch(_url).then(function(response) {
-            // console.log('response',response);
-            return response.json();
-        }).then(function(response) {
-            // console.log('data',response);
-        }).catch(function(e) {
-            // console.log("Oops, error");
-        });
+        // let _url = 'http://localhost:20000/commoninfo/encryptor';
+        // fetch(_url).then(function(response) {
+        //     // console.log('response',response);
+        //     return response.json();
+        // }).then(function(response) {
+        //     // console.log('data',response);
+        // }).catch(function(e) {
+        //     // console.log("Oops, error");
+        // });
     },
     render: function() {
         let ContentComponent = this.state.routerInfo.componentName;

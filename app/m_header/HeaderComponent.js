@@ -20,14 +20,15 @@ var HeaderComponent = React.createClass({
             <div className="header">
                 <div className="left-btn">
                     { this.props.router.showLeftBtn ? 
-                        <button className=""  onClick={this.goBack}>Back</button> : null }
+                        <button className="btn"  onClick={this.goBack}>
+                         BACK</button> : null }
 
                 </div>
                 <div className="title">{ this.props.router.name ? this.props.router.name: null }</div>
                 <div className="right-btn">
 
                     { this.props.router.showRightBtn ? 
-                        <button className=""  onClick={this.goRouterClick}>+</button> : null }
+                        <button className="btn"  onClick={this.goRouterClick}>ADD ></button> : null }
                         </div>
             </div>
         );
