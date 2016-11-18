@@ -2,5 +2,3 @@ node_modules
 mockServer/logs
 mockServer/npm-debug.log
 dist/*
-dist/bundle.js
-dist/index.html
