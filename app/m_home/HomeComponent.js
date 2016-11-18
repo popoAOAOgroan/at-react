@@ -8,7 +8,21 @@ class HomeLayer extends React.Component{
 		super(props);
 
 		this.state = {
-			mockData: null
+			mockData: {
+				results :[
+					{
+						name: '固定资产',
+						list: [
+							{
+								aName: '小财迷',
+								aTotal: 16023100,
+								aYesterdayCash: '+34.78',
+								aTotalRate: '+1.67%'
+							}
+						]
+					}
+				]
+			}
 		};
 	};
     componentDidMount() {
